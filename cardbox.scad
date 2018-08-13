@@ -58,7 +58,7 @@ module card_box_cap(card_x, card_y, thickness) {
     p4 = p3 + [-thickness*0.8, -thickness*1.1];
     p5 = p3 + [0, -1.8*thickness];
     p6 = p5 + [thickness+card_x/2,0];
-    p7 = p6 + [0, thickness];
+    p7 = p6 + [0, thickness*0.9];
     
     p = [p1,p2,p3,p4,p5,p6,p7];
     
