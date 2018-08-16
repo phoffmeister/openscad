@@ -54,7 +54,7 @@ module card_box_cap(card_x, card_y, thickness) {
                     mirror([1,0,0]) translate([-card_x/2,0,0]) polygon(points=p);
                 }
             }
-            scale([0.3,0.015,0.3]) rotate([-90,0,0]) translate([0,0,100]) surface(file="magic.png", center=true, invert=true);
+            //scale([0.3,0.015,0.3]) rotate([-90,0,0]) translate([0,0,100]) surface(file="image.png", center=true, invert=true);
         }
         translate([card_x/2+thickness/2, -2.2, (-thickness*1.01)+(-card_y/2)*0.925]) cube([thickness*0.6,2,(card_y/2)*0.15], center=true);
         translate([card_x/2+thickness/2, -2.2, (-card_y/2)*0.85]) cube([thickness,4,5.1], center=true);
