@@ -1,3 +1,16 @@
+// card width
+card_x = 70; // [45: 120]
+
+//card height
+card_y = 100; // [45: 120]
+
+// wall thickness
+thickness = 2.5; // [1.5:0.1:3.5]
+
+// box inner height
+inner_h = 40; // [20:100]
+
+
 module card_box(card_x, card_y, thickness, inner_height) {
     p1 = [0,0];
     p2 = p1 + [0, inner_height];
@@ -63,6 +76,6 @@ module card_box_cap(card_x, card_y, thickness) {
     }
 }
 rotate([90,0,0]) {
-    //card_box(70,100,2.5,23);
-    card_box_cap(70,100,2.5);
+    card_box(card_x, card_y, thickness, inner_h);
+    translate([card_x +30,0,0]) card_box_cap(card_x, card_y, thickness);
 }
